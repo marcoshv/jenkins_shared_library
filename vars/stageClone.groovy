@@ -6,7 +6,9 @@ def cloneRepo(String repo, String branch) {
 def call(String repo, String branch) {
     stage('Clone Repo') {
         steps {
-            cloneRepo(repo, branch)
+            script {
+                cloneRepo(repo, branch)
+            }
         }
     }
 }

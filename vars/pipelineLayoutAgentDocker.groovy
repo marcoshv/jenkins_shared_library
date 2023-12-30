@@ -12,8 +12,10 @@ def call(Map pipelineParams) {
             stagePackage()
             stage ('Stage publish') {
                 steps {
-                    stagePublish.pubProcess1()
-                    stagePublish.pubProcess2()
+                    script {
+                        stagePublish.pubProcess1()
+                        stagePublish.pubProcess2()
+                    }
                 }
             }
         }
