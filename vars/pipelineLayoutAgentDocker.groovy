@@ -14,7 +14,6 @@ def call(Map pipelineParams) {
                     }
                 }
             }
-            stageClone(pipelineParams.repoName, pipelineParams.branch)
             stage('Stage Build') {
                 steps {
                     script {
@@ -23,7 +22,9 @@ def call(Map pipelineParams) {
                     }
                 }
             }
-            stagePackage()
+            stage ('Stage Package') {
+                stagePackage('Stage Package')
+            }
             stage ('Stage publish') {
                 steps {
                     script {
