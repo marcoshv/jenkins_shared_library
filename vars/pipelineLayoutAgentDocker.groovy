@@ -2,7 +2,7 @@ def call(Map pipelineParams) {
     pipeline {
         agent {
             docker {
-                image pipelineParams.image
+                image pipelineParams.agent.name
             }
         }
 
