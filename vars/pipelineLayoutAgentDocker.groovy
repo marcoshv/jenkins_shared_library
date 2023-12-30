@@ -4,15 +4,15 @@ def call(Map pipelineParams) {
             docker {
                 image pipelineParams.image
             }
+        }
 
-            stages {
-                stageClone.cloneRepo(pipelineParams.repoName, pipelineParams.branch)
-                stageBuild()
-                stagePackage()
-                stage ('Stage publish') {
-                    stagePublish.pubProcess1()
-                    stagePublish.pubProcess2()
-                }
+        stages {
+            stageClone.cloneRepo(pipelineParams.repoName, pipelineParams.branch)
+            stageBuild()
+            stagePackage()
+            stage ('Stage publish') {
+                stagePublish.pubProcess1()
+                stagePublish.pubProcess2()
             }
         }
     }
