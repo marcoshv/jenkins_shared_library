@@ -10,7 +10,7 @@ def call(Map pipelineParams) {
             stage('Clone Repo') {
                 steps {
                     script {
-                        stageClone(pipelineParams.repo, pipelineParams.branch)
+                        stageClone(pipelineParams.repoUrl, pipelineParams.branch)
                     }
                 }
             }
