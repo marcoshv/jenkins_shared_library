@@ -8,7 +8,9 @@ def proc2() {
 
 def call() {
     stage('Stage Build') {
-        proc1()
-        proc2()
+        steps {
+            proc1()
+            proc2()
+        }
     }
 }
