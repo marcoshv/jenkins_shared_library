@@ -1,7 +1,5 @@
 def call() {
-    steps {
-        script {
-            echo "Stage Package"
-        }
+    script {
+        echo "Stage Package"
     }
 }

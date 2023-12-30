@@ -23,7 +23,9 @@ def call(Map pipelineParams) {
                 }
             }
             stage ('Stage Package') {
-                stagePackage('Stage Package')
+                steps {
+                    stagePackage('Stage Package')
+                }
             }
             stage ('Stage publish') {
                 steps {
