@@ -7,7 +7,7 @@ def call(Map pipelineParams) {
         }
 
         stages {
-            stageClone(pipelineParams.repoName, pipelineParams.branch)
+            stageClone.call(pipelineParams.repoName, pipelineParams.branch)
             stageBuild()
             stagePackage()
             stage ('Stage publish') {
