@@ -7,13 +7,11 @@ def call(Map pipelineParams) {
         }
 
         stages {
-            // stage('Clone Repo') {
-            //     steps {
-            //         script {
-            //             stageClone.cloneRepo(repo, branch)
-            //         }
-            //     }
-            // }
+            stage('Clone Repo') {
+                steps {
+                    stageClone.cloneRepo(repo, branch)
+                }
+            }
             stage('Stage Build') {
                 steps {
                     script {
