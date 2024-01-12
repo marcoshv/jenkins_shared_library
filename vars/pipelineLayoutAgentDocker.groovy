@@ -1,10 +1,6 @@
 def call(Map pipelineParams) {
     pipeline {
-        agent {
-            docker {
-                image pipelineParams.image
-            }
-        }
+        agent any
 
         stages {
             stage('Clone Repo') {
