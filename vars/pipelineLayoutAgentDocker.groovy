@@ -13,8 +13,7 @@ def call(Map pipelineParams) {
             stage('Stage Build') {
                 steps {
                     script {
-                        stageBuild.proc1()
-                        stageBuild.proc2()
+                        stageBuild(4,5)
                     }
                 }
             }
