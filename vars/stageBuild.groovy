@@ -1,6 +1,6 @@
 def proc1(int a, int b ) {
     echo "proc1"
-    echo $a
+    echo "$a"
 }
 
 def proc2() {
